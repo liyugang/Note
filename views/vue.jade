@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title OneDay登录
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+    meta(content='description', name='OneDay')
+    meta(content='author', name='lyg')
+    link(rel='shortcut icon', href='images/logo.png')
+    link(href='css/bootstrap.css', rel='stylesheet', type='text/css')
+    link(href='css/rdm.css', rel='stylesheet', type='text/css')
+
+    script(src = "https://unpkg.com/vue", type='text/javascript')
+    //- script(src = "js/service/rdmService.js", type='text/javascript')
+    script(src='js/jquery-3.2.1.min.js', type='text/javascript')
+    script(src='js/bootstrap.js', type='text/javascript')
+    //- script(src='js/rdm/manager.js', type='text/javascript')
+    
+  body.page-header-fixed.page-footer-fixed
+    div#app
+      .row.show-grid
+        div.title 登录{{ message }}{{number | fixed}}
+      .row.show-grid
+        .col-md-6.col-md-offset-3
+          .input-group
+            span#basic-addon1.input-group-addon(v-if="message" ) 账	&nbsp&nbsp户
+            input.form-control(:class="{selected:isselect}"  v-model.number="message" type='text', placeholder='邮箱', aria-describedby='basic-addon1' autocomplete="on")
+
+      .row.show-grid
+        .col-md-6.col-md-offset-3
+          .input-group
+            span#basic-addon1.input-group-addon 密	&nbsp&nbsp码
+            input.form-control(type='password', placeholder='密码', aria-describedby='basic-addon1')
+
+      .row.show-grid
+        .col-md-6.col-md-offset-3
+            input.formbtn.loginbtn(:disabled="isButtonDisabled" @click="commit(12)" name='提交', type='submit', value='登录')
+            a.pull-right(href="/signup" style="margin-top: 50px;") 没有账户？点击注册
+      ul
+        li(v-for="todo in todolist") {{todo.name}}
+        | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        todo-item(v-for="item in todolist" v-bind:tododata="item")
+    script(src='js/rdm/managerVue.js', type='text/javascript')

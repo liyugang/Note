@@ -1,0 +1,63 @@
+.bg {
+    background: url("/images/loading.gif") no-repeat center top;
+}
+
+.input-group {
+    margin-top: 50px;
+}
+
+.form-control {
+    height: 50px;
+}
+.title {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.loginbtn {
+    background-color: #5db85b;
+    color: #fff;
+    border: 0;
+    width: 100px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.signupbtn {
+    background-color: #5db85b;
+    color: #fff;
+    border: 0;
+    width: 100px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.selected {
+    background-color: #e4e4e4;
+}
+
+.bt-red {
+    background-color: #e23434;
+    ;
+    color: #fff;
+}
+
+.bt-bule {
+    background-color: #5e9ef1;
+    color: #fff;
+}
+
+.bt-green {
+    background-color: #1fb922;
+    ;
+    color: #fff;
+}
+
+.m {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 6px;
+    margin-top: 58px;
+    margin-bottom: 10px;
+}
