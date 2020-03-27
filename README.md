@@ -1,5 +1,5 @@
 # Note
->  做个项目练手用 
+>  模仿有道云笔记 
 
 > 日记工具，express+mongoose+vue编写
 
